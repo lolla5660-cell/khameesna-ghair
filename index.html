@@ -13,80 +13,125 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Tahoma, sans-serif;
       background: #f7f9fc;
       color: #333;
-      text-align: center;
     }
 
     header {
-      background: linear-gradient(135deg, #6a8caf, #9bb8d3);
+      background: linear-gradient(135deg, #557795, #9bb8d3);
       color: white;
-      padding: 55px 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
 
     header h1 {
       margin: 0 0 15px;
-      font-size: 36px;
+      font-size: 38px;
     }
 
     header p {
       margin: 0;
-      font-size: 20px;
+      font-size: 21px;
     }
 
     section {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1050px;
+      margin: 45px auto;
       padding: 0 20px;
-    }
-
-    h2 {
-      color: #557795;
-      margin-bottom: 25px;
     }
 
     .intro {
       background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      line-height: 1.9;
-      font-size: 17px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      line-height: 2;
+    }
+
+    h2 {
+      text-align: center;
+      color: #557795;
+      margin-bottom: 30px;
+      font-size: 28px;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
     .gallery img {
       width: 100%;
-      height: 220px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      border-radius: 18px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: transform 0.25s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     .video-box {
       background: white;
       padding: 20px;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
     video {
       width: 100%;
-      max-height: 550px;
-      border-radius: 12px;
+      max-height: 600px;
+      border-radius: 15px;
+      display: block;
+    }
+
+    .closing {
+      text-align: center;
+      font-size: 20px;
+      line-height: 2;
+      color: #557795;
     }
 
     footer {
-      margin-top: 50px;
-      padding: 25px;
+      margin-top: 60px;
+      padding: 30px 20px;
       background: #557795;
       color: white;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 45px 15px;
+      }
+
+      header h1 {
+        font-size: 29px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      section {
+        margin: 30px auto;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .gallery img {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -100,7 +145,8 @@
 
   <section>
     <div class="intro">
-      <h2>عن المبادرة</h2>
+      <h2>🌟 عن المبادرة</h2>
+
       <p>
         نشارككم شواهد وصورًا من مبادرة
         <strong>خميسنا غير وحضورك يفرق</strong>،
@@ -114,7 +160,10 @@
 
     <div class="gallery">
 
-      <!-- سنضع الصور هنا لاحقًا -->
+      <img src="1.jpeg" alt="شاهد من المبادرة">
+      <img src="2.jpeg" alt="شاهد من المبادرة">
+      <img src="3.jpeg" alt="شاهد من المبادرة">
+      <img src="4.jpeg" alt="شاهد من المبادرة">
 
     </div>
   </section>
@@ -124,15 +173,24 @@
 
     <div class="video-box">
 
-      <!-- سنضع الفيديو هنا لاحقًا -->
-
-      <p>سيتم إضافة الفيديو قريبًا</p>
+      <video controls>
+        <source src="khameesna-video.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
 
     </div>
   </section>
 
+  <section>
+    <div class="closing">
+      <p>
+        حضوركم يفرق، وبأثركم يستمر العطاء ✨
+      </p>
+    </div>
+  </section>
+
   <footer>
-    خميسنا غير وحضورك يفرق ✨
+    مبادرة خميسنا غير وحضورك يفرق
   </footer>
 
 </body>
